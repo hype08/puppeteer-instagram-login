@@ -1,24 +1,6 @@
 const puppeteer = require('puppeteer');
-const { google } = require('googleapis');
-const keys = require("./keys.json")
+
 const BASE_URL = "https://instagram.com/";
-
-const client = new google.auth.JWT(
-  keys.client_email, 
-  null, 
-  keys.private_key,
-  ['https://www.googleapis.com/auth/spreadsheets']
-);
-
-client.authorize((err, tokens) => {
-  if (err) {
-    console.info(err);
-    return;
-  } else {
-    console.info("Connected to Google API..")
-  }
-
-})
 
 const instagram = {
   browser: null,
@@ -36,7 +18,6 @@ const instagram = {
     // navigate  to instagram main page.
     await instagram.page.goto(BASE_URL, { waitUntil: 'networkidle2' });
 
-
     // // wait for 1sec
     await instagram.page.waitFor(1000);
 
@@ -45,8 +26,6 @@ const instagram = {
     
 
     await instagram.page.type('input[name="password"]', password, { delay: 50 });
-
-    debugger;
 
     // // clicking on the login button 
     loginButton = await instagram.page.$x('//div[contains(text(),"Log In")]');
