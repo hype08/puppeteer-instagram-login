@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "googleapis": "^39.2.0",
     "puppeteer": "^3.3.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hype08/puppeteer-instagram-login.git"
+  },
+  "keywords": [],
+  "author": "Henry Zhang <isomorphicdev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hype08/puppeteer-instagram-login/issues"
+  },
+  "homepage": "https://github.com/hype08/puppeteer-instagram-login#readme"
 }
