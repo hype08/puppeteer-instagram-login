@@ -34,8 +34,10 @@ async function gsrun(client) {
 
   let data = await gsapi.spreadsheets.values.get(opt);
   let dataArray = data.data.values;
+
   username = dataArray[0][0];
   password = dataArray[0][1];
+  
   return username, password;
 }
 
