@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 100
+  ignore:
+  - dependency-name: googleapis
+    versions:
+    - 67.0.0
+    - 67.1.0
+    - 67.1.1
+    - 68.0.0
+    - 70.0.0
+    - 71.0.0
+  - dependency-name: puppeteer
+    versions:
+    - 5.5.0
+    - 6.0.0
+    - 7.0.0
+    - 7.0.1
+    - 7.0.4
+    - 7.1.0
+    - 8.0.0
+  - dependency-name: bl
+    versions:
+    - 4.0.3
+    - 4.0.4
